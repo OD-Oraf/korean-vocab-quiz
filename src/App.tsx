@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from './components/ui/card';
 import { Button } from './components/ui/button';
 
@@ -8,7 +8,7 @@ interface VocabItem {
     options: string[];
 }
 
-const KoreanVocabQuiz: React.FC = () => {
+const KoreanVocabQuiz = () => {
     const vocabList: VocabItem[] = [
         { korean: '무엇', english: 'what', options: ['what', 'where', 'when', 'who'] },
         { korean: '음료', english: 'beverage', options: ['beverage', 'food', 'water', 'tea'] },
