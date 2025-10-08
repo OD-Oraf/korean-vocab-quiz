@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from './components/ui/card';
 import { Button } from './components/ui/button';
+import testVocabSet from './data/vocab/test-set.json';
 
 interface VocabItem {
     korean: string;
@@ -9,23 +10,7 @@ interface VocabItem {
 }
 
 const KoreanVocabQuiz = () => {
-    const vocabList: VocabItem[] = [
-        { korean: '무엇', english: 'what', options: ['what', 'where', 'when', 'who'] },
-        { korean: '음료', english: 'beverage', options: ['beverage', 'food', 'water', 'tea'] },
-        { korean: '저녁', english: 'evening/dinner', options: ['evening/dinner', 'morning', 'lunch', 'afternoon'] },
-        { korean: '물', english: 'water', options: ['water', 'milk', 'juice', 'coffee'] },
-        { korean: '곧', english: 'soon', options: ['soon', 'now', 'later', 'yesterday'] },
-        { korean: '좀', english: 'a little/please', options: ['a little/please', 'very', 'too much', 'always'] },
-        { korean: '가져다 주다', english: 'to bring (for someone)', options: ['to bring (for someone)', 'to take away', 'to throw', 'to buy'] },
-        { korean: '만들다', english: 'to make', options: ['to make', 'to break', 'to eat', 'to drink'] },
-        { korean: '읽다', english: 'to read', options: ['to read', 'to write', 'to speak', 'to listen'] },
-        { korean: '돕다', english: 'to help', options: ['to help', 'to hurt', 'to ignore', 'to leave'] },
-        { korean: '열다', english: 'to open', options: ['to open', 'to close', 'to lock', 'to break'] },
-        { korean: '문', english: 'door', options: ['door', 'window', 'wall', 'floor'] },
-        { korean: '이번', english: 'this time', options: ['this time', 'last time', 'next time', 'every time'] },
-        { korean: '영상', english: 'video', options: ['video', 'photo', 'song', 'book'] },
-        { korean: '이야기하다', english: 'to talk/discuss', options: ['to talk/discuss', 'to sleep', 'to walk', 'to run'] }
-    ];
+    const vocabList: VocabItem[] = testVocabSet;
 
     const [currentQuestion, setCurrentQuestion] = useState<number>(0);
     const [score, setScore] = useState<number>(0);
