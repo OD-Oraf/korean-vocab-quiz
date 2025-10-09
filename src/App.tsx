@@ -1,11 +1,14 @@
-import { useState, useEffect } from 'react';
-import { Card, CardContent, CardHeader, CardTitle } from './components/ui/card';
-import { Button } from './components/ui/button';
+import {useState, useEffect} from 'react';
+import {Card, CardContent, CardHeader, CardTitle} from './components/ui/card';
+import {Button} from './components/ui/button';
 import testVocabSet from './data/vocab/test-set.json';
 
 interface VocabItem {
     korean: string;
     english: string;
+}
+
+interface QuizItem extends VocabItem {
     options: string[];
 }
 
@@ -17,13 +20,13 @@ const KoreanVocabQuiz = () => {
     const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
     const [showResult, setShowResult] = useState<boolean>(false);
     const [quizComplete, setQuizComplete] = useState<boolean>(false);
-    const [shuffledVocab, setShuffledVocab] = useState<VocabItem[]>([]);
+    const [shuffledVocab, setShuffledVocab] = useState<QuizItem[]>([]);
 
     useEffect(() => {
         shuffleQuiz();
     }, []);
 
-    const shuffleArray = <T,>(array: T[]): T[] => {
+    const shuffleArray = <T, >(array: T[]): T[] => {
         const shuffled = [...array];
         for (let i = shuffled.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
@@ -32,8 +35,31 @@ const KoreanVocabQuiz = () => {
         return shuffled;
     };
 
+    const generateRandomOptions = (correctAnswer: string, allAnswers: string[]): string[] => {
+        // Get all possible wrong answers (excluding the correct one)
+        const wrongAnswers = allAnswers.filter(answer => answer !== correctAnswer);
+
+        // Shuffle and take 3 random wrong answers
+        const shuffledWrong: string[] = shuffleArray(wrongAnswers);
+        const selectedWrong = shuffledWrong.slice(0, 3);
+
+        // Combine correct answer with wrong answers and shuffle
+        const options = [correctAnswer, ...selectedWrong];
+        return shuffleArray(options);
+    };
+
     const shuffleQuiz = (): void => {
-        const shuffled = shuffleArray(vocabList);
+        // Get all English answers for the option pool
+        const allEnglishAnswers: string[] = vocabList.map(item => item.english);
+
+        // Create quiz items with randomized options
+        const quizItems: QuizItem[] = vocabList.map(item => ({
+            ...item,
+            options: generateRandomOptions(item.english, allEnglishAnswers)
+        }));
+
+        // Shuffle the quiz order
+        const shuffled = shuffleArray(quizItems);
         setShuffledVocab(shuffled);
         setCurrentQuestion(0);
         setScore(0);
@@ -68,7 +94,8 @@ const KoreanVocabQuiz = () => {
     if (quizComplete) {
         const percentage = Math.round((score / shuffledVocab.length) * 100);
         return (
-            <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 p-4">
+            <div
+                className="flex items-center justify-center min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 p-4">
                 <Card className="w-full max-w-2xl">
                     <CardHeader>
                         <CardTitle className="text-3xl text-center">Quiz Complete! 🎉</CardTitle>
@@ -105,17 +132,17 @@ const KoreanVocabQuiz = () => {
             <Card className="w-full max-w-2xl">
                 <CardHeader>
                     <div className="flex justify-between items-center mb-2">
-            <span className="text-sm text-gray-600">
-              Question {currentQuestion + 1} of {shuffledVocab.length}
-            </span>
+                        <span className="text-sm text-gray-600">
+                          Question {currentQuestion + 1} of {shuffledVocab.length}
+                        </span>
                         <span className="text-sm font-semibold text-indigo-600">
-              Score: {score}
-            </span>
+                          Score: {score}
+                        </span>
                     </div>
                     <div className="w-full bg-gray-200 rounded-full h-2">
                         <div
                             className="bg-indigo-600 h-2 rounded-full transition-all duration-300"
-                            style={{ width: `${((currentQuestion + 1) / shuffledVocab.length) * 100}%` }}
+                            style={{width: `${((currentQuestion + 1) / shuffledVocab.length) * 100}%`}}
                         />
                     </div>
                 </CardHeader>
