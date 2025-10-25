@@ -1,0 +1,21 @@
+[
+  { "korean": "가게", "english": "store/shop" },
+  { "korean": "편의점", "english": "convenience store" },
+  { "korean": "마트", "english": "mart/supermarket" },
+  { "korean": "백화점", "english": "department store" },
+  { "korean": "가격", "english": "price" },
+  { "korean": "얼마예요?", "english": "how much is it?" },
+  { "korean": "비싸다", "english": "expensive" },
+  { "korean": "비싸요", "english": "it's expensive" },
+  { "korean": "싸다", "english": "cheap" },
+  { "korean": "싸요", "english": "it's cheap" },
+  { "korean": "할인", "english": "discount" },
+  { "korean": "세일", "english": "sale" },
+  { "korean": "봉투", "english": "bag" },
+  { "korean": "환불", "english": "refund" },
+  { "korean": "교환", "english": "exchange" },
+  { "korean": "크기", "english": "size" },
+  { "korean": "큰", "english": "big" },
+  { "korean": "작은", "english": "small" },
+  { "korean": "중간", "english": "medium" }
+]
