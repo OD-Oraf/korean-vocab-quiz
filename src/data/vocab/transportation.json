@@ -1,41 +1,172 @@
-[
-  { "korean": "지하철", "english": "subway" },
-  { "korean": "전철", "english": "train/metro" },
-  { "korean": "역", "english": "station" },
-  { "korean": "호선", "english": "line (number)" },
-  { "korean": "1호선", "english": "line 1" },
-  { "korean": "2호선", "english": "line 2" },
-  { "korean": "출구", "english": "exit" },
-  { "korean": "입구", "english": "entrance" },
-  { "korean": "환승", "english": "transfer" },
-  { "korean": "교통카드", "english": "transit card" },
-  { "korean": "티머니", "english": "T-money card" },
-  { "korean": "충전", "english": "recharge/top up" },
-  { "korean": "개찰구", "english": "ticket gate" },
-  { "korean": "승강장", "english": "platform" },
-  { "korean": "방향", "english": "direction" },
-  { "korean": "막차", "english": "last train" },
-  { "korean": "첫차", "english": "first train" },
-  { "korean": "버스", "english": "bus" },
-  { "korean": "정류장", "english": "bus stop" },
-  { "korean": "번", "english": "number" },
-  { "korean": "번 버스", "english": "bus number" },
-  { "korean": "타다", "english": "to ride/board" },
-  { "korean": "내리다", "english": "to get off" },
-  { "korean": "갈아타다", "english": "to transfer" },
-  { "korean": "요금", "english": "fare" },
-  { "korean": "앞문", "english": "front door" },
-  { "korean": "뒷문", "english": "back door" },
-  { "korean": "다음 정류장", "english": "next stop" },
-  { "korean": "택시", "english": "taxi" },
-  { "korean": "기사님", "english": "driver (respectful)" },
-  { "korean": "목적지", "english": "destination" },
-  { "korean": "여기", "english": "here" },
-  { "korean": "저기", "english": "there" },
-  { "korean": "세워주세요", "english": "please stop" },
-  { "korean": "빨리", "english": "quickly" },
-  { "korean": "오른쪽", "english": "right" },
-  { "korean": "왼쪽", "english": "left" },
-  { "korean": "직진", "english": "straight" },
-  { "korean": "모퉁이", "english": "corner" }
-]
+{
+  "metadata": {
+    "name": "🚇 Transportation",
+    "description": "Subway, bus, taxi vocabulary and directions",
+    "category": "travel",
+    "difficulty": "intermediate",
+    "tags": [
+      "travel"
+    ],
+    "author": "Korean Vocab Quiz",
+    "version": "2.0",
+    "lastUpdated": "2025-10-25"
+  },
+  "items": [
+    {
+      "korean": "지하철",
+      "english": "subway"
+    },
+    {
+      "korean": "전철",
+      "english": "train/metro"
+    },
+    {
+      "korean": "역",
+      "english": "station"
+    },
+    {
+      "korean": "호선",
+      "english": "line (number)"
+    },
+    {
+      "korean": "1호선",
+      "english": "line 1"
+    },
+    {
+      "korean": "2호선",
+      "english": "line 2"
+    },
+    {
+      "korean": "출구",
+      "english": "exit"
+    },
+    {
+      "korean": "입구",
+      "english": "entrance"
+    },
+    {
+      "korean": "환승",
+      "english": "transfer"
+    },
+    {
+      "korean": "교통카드",
+      "english": "transit card"
+    },
+    {
+      "korean": "티머니",
+      "english": "T-money card"
+    },
+    {
+      "korean": "충전",
+      "english": "recharge/top up"
+    },
+    {
+      "korean": "개찰구",
+      "english": "ticket gate"
+    },
+    {
+      "korean": "승강장",
+      "english": "platform"
+    },
+    {
+      "korean": "방향",
+      "english": "direction"
+    },
+    {
+      "korean": "막차",
+      "english": "last train"
+    },
+    {
+      "korean": "첫차",
+      "english": "first train"
+    },
+    {
+      "korean": "버스",
+      "english": "bus"
+    },
+    {
+      "korean": "정류장",
+      "english": "bus stop"
+    },
+    {
+      "korean": "번",
+      "english": "number"
+    },
+    {
+      "korean": "번 버스",
+      "english": "bus number"
+    },
+    {
+      "korean": "타다",
+      "english": "to ride/board"
+    },
+    {
+      "korean": "내리다",
+      "english": "to get off"
+    },
+    {
+      "korean": "갈아타다",
+      "english": "to transfer"
+    },
+    {
+      "korean": "요금",
+      "english": "fare"
+    },
+    {
+      "korean": "앞문",
+      "english": "front door"
+    },
+    {
+      "korean": "뒷문",
+      "english": "back door"
+    },
+    {
+      "korean": "다음 정류장",
+      "english": "next stop"
+    },
+    {
+      "korean": "택시",
+      "english": "taxi"
+    },
+    {
+      "korean": "기사님",
+      "english": "driver (respectful)"
+    },
+    {
+      "korean": "목적지",
+      "english": "destination"
+    },
+    {
+      "korean": "여기",
+      "english": "here"
+    },
+    {
+      "korean": "저기",
+      "english": "there"
+    },
+    {
+      "korean": "세워주세요",
+      "english": "please stop"
+    },
+    {
+      "korean": "빨리",
+      "english": "quickly"
+    },
+    {
+      "korean": "오른쪽",
+      "english": "right"
+    },
+    {
+      "korean": "왼쪽",
+      "english": "left"
+    },
+    {
+      "korean": "직진",
+      "english": "straight"
+    },
+    {
+      "korean": "모퉁이",
+      "english": "corner"
+    }
+  ]
+}

@@ -1,28 +1,120 @@
-[
-  { "korean": "어디", "english": "where" },
-  { "korean": "어떻게", "english": "how" },
-  { "korean": "가다", "english": "to go" },
-  { "korean": "오다", "english": "to come" },
-  { "korean": "걷다", "english": "to walk" },
-  { "korean": "멀다", "english": "far" },
-  { "korean": "가깝다", "english": "close/near" },
-  { "korean": "앞", "english": "front" },
-  { "korean": "뒤", "english": "back/behind" },
-  { "korean": "옆", "english": "side/beside" },
-  { "korean": "건너편", "english": "across/opposite side" },
-  { "korean": "길", "english": "road/street" },
-  { "korean": "지도", "english": "map" },
-  { "korean": "주소", "english": "address" },
-  { "korean": "시간", "english": "time/hour" },
-  { "korean": "분", "english": "minute" },
-  { "korean": "지금", "english": "now" },
-  { "korean": "오늘", "english": "today" },
-  { "korean": "내일", "english": "tomorrow" },
-  { "korean": "어제", "english": "yesterday" },
-  { "korean": "아침", "english": "morning" },
-  { "korean": "점심", "english": "lunch/noon" },
-  { "korean": "저녁", "english": "evening/dinner" },
-  { "korean": "밤", "english": "night" },
-  { "korean": "몇 시", "english": "what time" },
-  { "korean": "언제", "english": "when" }
-]
+{
+  "metadata": {
+    "name": "🗺️ Directions & Time",
+    "description": "Location words, time expressions, and navigation",
+    "category": "travel",
+    "difficulty": "intermediate",
+    "tags": [
+      "travel"
+    ],
+    "author": "Korean Vocab Quiz",
+    "version": "2.0",
+    "lastUpdated": "2025-10-25"
+  },
+  "items": [
+    {
+      "korean": "어디",
+      "english": "where"
+    },
+    {
+      "korean": "어떻게",
+      "english": "how"
+    },
+    {
+      "korean": "가다",
+      "english": "to go"
+    },
+    {
+      "korean": "오다",
+      "english": "to come"
+    },
+    {
+      "korean": "걷다",
+      "english": "to walk"
+    },
+    {
+      "korean": "멀다",
+      "english": "far"
+    },
+    {
+      "korean": "가깝다",
+      "english": "close/near"
+    },
+    {
+      "korean": "앞",
+      "english": "front"
+    },
+    {
+      "korean": "뒤",
+      "english": "back/behind"
+    },
+    {
+      "korean": "옆",
+      "english": "side/beside"
+    },
+    {
+      "korean": "건너편",
+      "english": "across/opposite side"
+    },
+    {
+      "korean": "길",
+      "english": "road/street"
+    },
+    {
+      "korean": "지도",
+      "english": "map"
+    },
+    {
+      "korean": "주소",
+      "english": "address"
+    },
+    {
+      "korean": "시간",
+      "english": "time/hour"
+    },
+    {
+      "korean": "분",
+      "english": "minute"
+    },
+    {
+      "korean": "지금",
+      "english": "now"
+    },
+    {
+      "korean": "오늘",
+      "english": "today"
+    },
+    {
+      "korean": "내일",
+      "english": "tomorrow"
+    },
+    {
+      "korean": "어제",
+      "english": "yesterday"
+    },
+    {
+      "korean": "아침",
+      "english": "morning"
+    },
+    {
+      "korean": "점심",
+      "english": "lunch/noon"
+    },
+    {
+      "korean": "저녁",
+      "english": "evening/dinner"
+    },
+    {
+      "korean": "밤",
+      "english": "night"
+    },
+    {
+      "korean": "몇 시",
+      "english": "what time"
+    },
+    {
+      "korean": "언제",
+      "english": "when"
+    }
+  ]
+}

@@ -17,7 +17,17 @@ const QuizApp = () => {
             setIsLoading(true);
             import(`./data/vocab/${listId}.json`)
                 .then(module => {
-                    setVocabList(module.default);
+                    const data = module.default;
+                    // Handle new structure with metadata and items
+                    if (data.metadata && data.items) {
+                        setVocabList(data.items);
+                    } else if (Array.isArray(data)) {
+                        // Fallback for old structure (plain array)
+                        setVocabList(data);
+                    } else {
+                        console.error('Unknown vocab file structure');
+                        setVocabList([]);
+                    }
                     setIsLoading(false);
                 })
                 .catch(err => {

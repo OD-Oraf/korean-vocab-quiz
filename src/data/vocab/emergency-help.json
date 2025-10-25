@@ -1,14 +1,66 @@
-[
-  { "korean": "도와주세요", "english": "please help me" },
-  { "korean": "살려주세요", "english": "save me/help" },
-  { "korean": "위험", "english": "danger" },
-  { "korean": "조심", "english": "be careful" },
-  { "korean": "경찰", "english": "police" },
-  { "korean": "병원", "english": "hospital" },
-  { "korean": "약국", "english": "pharmacy" },
-  { "korean": "아프다", "english": "to hurt/be sick" },
-  { "korean": "아파요", "english": "it hurts / I'm sick" },
-  { "korean": "잃어버렸어요", "english": "I lost it" },
-  { "korean": "영어 할 수 있어요?", "english": "can you speak English?" },
-  { "korean": "한국어 못해요", "english": "I can't speak Korean" }
-]
+{
+  "metadata": {
+    "name": "🆘 Emergency & Help",
+    "description": "Essential emergency phrases and asking for help",
+    "category": "emergency",
+    "difficulty": "beginner",
+    "tags": [
+      "emergency",
+      "emergency",
+      "essential"
+    ],
+    "author": "Korean Vocab Quiz",
+    "version": "2.0",
+    "lastUpdated": "2025-10-25"
+  },
+  "items": [
+    {
+      "korean": "도와주세요",
+      "english": "please help me"
+    },
+    {
+      "korean": "살려주세요",
+      "english": "save me/help"
+    },
+    {
+      "korean": "위험",
+      "english": "danger"
+    },
+    {
+      "korean": "조심",
+      "english": "be careful"
+    },
+    {
+      "korean": "경찰",
+      "english": "police"
+    },
+    {
+      "korean": "병원",
+      "english": "hospital"
+    },
+    {
+      "korean": "약국",
+      "english": "pharmacy"
+    },
+    {
+      "korean": "아프다",
+      "english": "to hurt/be sick"
+    },
+    {
+      "korean": "아파요",
+      "english": "it hurts / I'm sick"
+    },
+    {
+      "korean": "잃어버렸어요",
+      "english": "I lost it"
+    },
+    {
+      "korean": "영어 할 수 있어요?",
+      "english": "can you speak English?"
+    },
+    {
+      "korean": "한국어 못해요",
+      "english": "I can't speak Korean"
+    }
+  ]
+}

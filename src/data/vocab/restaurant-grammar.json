@@ -1,49 +1,206 @@
-[
-  { "korean": "주세요", "english": "please give me (polite request)" },
-  { "korean": "해주세요", "english": "please do (for me)" },
-  { "korean": "도와주세요", "english": "please help me" },
-  { "korean": "가르쳐주세요", "english": "please teach me" },
-  { "korean": "말씀해 주세요", "english": "please tell me (honorific)" },
-  { "korean": "기다려주세요", "english": "please wait" },
-  { "korean": "앉아주세요", "english": "please sit" },
-  { "korean": "~할게요", "english": "I will~ (declarative intent)" },
-  { "korean": "주문할게요", "english": "I will order" },
-  { "korean": "계산할게요", "english": "I will pay" },
-  { "korean": "먹을게요", "english": "I will eat" },
-  { "korean": "~하시겠어요?", "english": "would you like to~? (polite offer)" },
-  { "korean": "주문하시겠어요?", "english": "would you like to order?" },
-  { "korean": "더 드시겠어요?", "english": "would you like more?" },
-  { "korean": "뭐 드시겠어요?", "english": "what would you like to eat?" },
-  { "korean": "~지 않게", "english": "not~ (negative modification)" },
-  { "korean": "맵지 않게", "english": "not spicy" },
-  { "korean": "짜지 않게", "english": "not salty" },
-  { "korean": "달지 않게", "english": "not sweet" },
-  { "korean": "~어요/아요", "english": "polite present tense ending" },
-  { "korean": "맛있어요", "english": "it's delicious" },
-  { "korean": "좋아요", "english": "it's good / I like it" },
-  { "korean": "비싸요", "english": "it's expensive" },
-  { "korean": "~았어요/었어요", "english": "polite past tense ending" },
-  { "korean": "먹었어요", "english": "I ate" },
-  { "korean": "왔어요", "english": "I came" },
-  { "korean": "좋았어요", "english": "it was good" },
-  { "korean": "~으세요/세요", "english": "honorific polite imperative" },
-  { "korean": "앉으세요", "english": "please sit (honorific)" },
-  { "korean": "드세요", "english": "please eat (honorific)" },
-  { "korean": "오세요", "english": "please come (honorific)" },
-  { "korean": "~이/가 뭐예요?", "english": "what is~?" },
-  { "korean": "추천이 뭐예요?", "english": "what is the recommendation?" },
-  { "korean": "이게 뭐예요?", "english": "what is this?" },
-  { "korean": "가격이 얼마예요?", "english": "what is the price?" },
-  { "korean": "~돼요?", "english": "is it possible? / does it work?" },
-  { "korean": "카드 돼요?", "english": "can I use a card?" },
-  { "korean": "포장 돼요?", "english": "can I get it to-go?" },
-  { "korean": "예약 돼요?", "english": "can I make a reservation?" },
-  { "korean": "~있어요?", "english": "do you have~? / is there~?" },
-  { "korean": "자리 있어요?", "english": "is there a seat?" },
-  { "korean": "물 있어요?", "english": "do you have water?" },
-  { "korean": "화장실 있어요?", "english": "is there a restroom?" },
-  { "korean": "좀", "english": "a little / please (softener)" },
-  { "korean": "물 좀 주세요", "english": "water please (polite softener)" },
-  { "korean": "천천히 좀 말씀해주세요", "english": "please speak a bit slowly" },
-  { "korean": "도와 좀 주세요", "english": "please help me a bit" }
-]
+{
+  "metadata": {
+    "name": "📚 Restaurant Grammar Patterns",
+    "description": "Essential grammar patterns: 주세요, 해주세요, ~할게요, and more",
+    "category": "grammar",
+    "difficulty": "intermediate",
+    "tags": [
+      "grammar",
+      "grammar",
+      "patterns"
+    ],
+    "author": "Korean Vocab Quiz",
+    "version": "2.0",
+    "lastUpdated": "2025-10-25"
+  },
+  "items": [
+    {
+      "korean": "주세요",
+      "english": "please give me (polite request)"
+    },
+    {
+      "korean": "해주세요",
+      "english": "please do (for me)"
+    },
+    {
+      "korean": "도와주세요",
+      "english": "please help me"
+    },
+    {
+      "korean": "가르쳐주세요",
+      "english": "please teach me"
+    },
+    {
+      "korean": "말씀해 주세요",
+      "english": "please tell me (honorific)"
+    },
+    {
+      "korean": "기다려주세요",
+      "english": "please wait"
+    },
+    {
+      "korean": "앉아주세요",
+      "english": "please sit"
+    },
+    {
+      "korean": "~할게요",
+      "english": "I will~ (declarative intent)"
+    },
+    {
+      "korean": "주문할게요",
+      "english": "I will order"
+    },
+    {
+      "korean": "계산할게요",
+      "english": "I will pay"
+    },
+    {
+      "korean": "먹을게요",
+      "english": "I will eat"
+    },
+    {
+      "korean": "~하시겠어요?",
+      "english": "would you like to~? (polite offer)"
+    },
+    {
+      "korean": "주문하시겠어요?",
+      "english": "would you like to order?"
+    },
+    {
+      "korean": "더 드시겠어요?",
+      "english": "would you like more?"
+    },
+    {
+      "korean": "뭐 드시겠어요?",
+      "english": "what would you like to eat?"
+    },
+    {
+      "korean": "~지 않게",
+      "english": "not~ (negative modification)"
+    },
+    {
+      "korean": "맵지 않게",
+      "english": "not spicy"
+    },
+    {
+      "korean": "짜지 않게",
+      "english": "not salty"
+    },
+    {
+      "korean": "달지 않게",
+      "english": "not sweet"
+    },
+    {
+      "korean": "~어요/아요",
+      "english": "polite present tense ending"
+    },
+    {
+      "korean": "맛있어요",
+      "english": "it's delicious"
+    },
+    {
+      "korean": "좋아요",
+      "english": "it's good / I like it"
+    },
+    {
+      "korean": "비싸요",
+      "english": "it's expensive"
+    },
+    {
+      "korean": "~았어요/었어요",
+      "english": "polite past tense ending"
+    },
+    {
+      "korean": "먹었어요",
+      "english": "I ate"
+    },
+    {
+      "korean": "왔어요",
+      "english": "I came"
+    },
+    {
+      "korean": "좋았어요",
+      "english": "it was good"
+    },
+    {
+      "korean": "~으세요/세요",
+      "english": "honorific polite imperative"
+    },
+    {
+      "korean": "앉으세요",
+      "english": "please sit (honorific)"
+    },
+    {
+      "korean": "드세요",
+      "english": "please eat (honorific)"
+    },
+    {
+      "korean": "오세요",
+      "english": "please come (honorific)"
+    },
+    {
+      "korean": "~이/가 뭐예요?",
+      "english": "what is~?"
+    },
+    {
+      "korean": "추천이 뭐예요?",
+      "english": "what is the recommendation?"
+    },
+    {
+      "korean": "이게 뭐예요?",
+      "english": "what is this?"
+    },
+    {
+      "korean": "가격이 얼마예요?",
+      "english": "what is the price?"
+    },
+    {
+      "korean": "~돼요?",
+      "english": "is it possible? / does it work?"
+    },
+    {
+      "korean": "카드 돼요?",
+      "english": "can I use a card?"
+    },
+    {
+      "korean": "포장 돼요?",
+      "english": "can I get it to-go?"
+    },
+    {
+      "korean": "예약 돼요?",
+      "english": "can I make a reservation?"
+    },
+    {
+      "korean": "~있어요?",
+      "english": "do you have~? / is there~?"
+    },
+    {
+      "korean": "자리 있어요?",
+      "english": "is there a seat?"
+    },
+    {
+      "korean": "물 있어요?",
+      "english": "do you have water?"
+    },
+    {
+      "korean": "화장실 있어요?",
+      "english": "is there a restroom?"
+    },
+    {
+      "korean": "좀",
+      "english": "a little / please (softener)"
+    },
+    {
+      "korean": "물 좀 주세요",
+      "english": "water please (polite softener)"
+    },
+    {
+      "korean": "천천히 좀 말씀해주세요",
+      "english": "please speak a bit slowly"
+    },
+    {
+      "korean": "도와 좀 주세요",
+      "english": "please help me a bit"
+    }
+  ]
+}

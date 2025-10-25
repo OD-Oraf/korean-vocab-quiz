@@ -1,4 +1,45 @@
-[
-  {"korean":"", "english":""},
-  {"korean":"", "english":""}
-]
+{
+  "metadata": {
+    "name": "Template Vocab List",
+    "description": "Description of what this vocab list covers",
+    "category": "general",
+    "difficulty": "beginner",
+    "tags": ["tag1", "tag2"],
+    "author": "Korean Vocab Quiz",
+    "version": "1.0",
+    "lastUpdated": "2025-10-25",
+    "estimatedMinutes": 10,
+    "prerequisites": [],
+    "relatedLists": [],
+    "learningPath": "korean-basics",
+    "source": "textbook/website/etc"
+  },
+  "items": [
+    {
+      "id": "template_001",
+      "korean": "한국어",
+      "english": "Korean language",
+      "romanization": "hangugeo",
+      "partOfSpeech": "noun",
+      "difficultyScore": 3,
+      "frequencyRank": 100,
+      "notes": "Optional notes about usage or context",
+      "examples": [
+        {
+          "korean": "한국어를 배우고 있어요",
+          "english": "I am learning Korean"
+        }
+      ]
+    },
+    {
+      "id": "template_002", 
+      "korean": "안녕하세요",
+      "english": "hello",
+      "romanization": "annyeonghaseyo",
+      "partOfSpeech": "greeting",
+      "difficultyScore": 1,
+      "frequencyRank": 1,
+      "notes": "Standard polite greeting"
+    }
+  ]
+}
