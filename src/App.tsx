@@ -3,15 +3,7 @@ import {Card, CardContent, CardHeader, CardTitle} from './components/ui/card';
 import {Button} from './components/ui/button';
 import {VocabListSelector} from './components/VocabListSelector';
 import {BrowserRouter as Router, Routes, Route, useNavigate, useSearchParams} from 'react-router-dom';
-
-interface VocabItem {
-    korean: string;
-    english: string;
-}
-
-interface QuizItem extends VocabItem {
-    options: string[];
-}
+import {VocabItem, QuizItem} from './types/vocab';
 
 const QuizApp = () => {
     const navigate = useNavigate();

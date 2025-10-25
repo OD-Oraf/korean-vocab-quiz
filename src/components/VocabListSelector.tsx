@@ -1,29 +1,31 @@
 import { Button } from "./ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
+import { VocabItem, VocabList } from "../types/vocab";
+import testSetData from '../data/vocab/test-set.json';
+import krServiceVocabData from '../data/vocab/kr-service-vocab.json';
 
-interface VocabList {
-  id: string;
-  name: string;
-  description: string;
-  count: number;
-}
 
 interface VocabListSelectorProps {
   onSelect: (listId: string) => void;
 }
+
+const calculateVocabListSize = (vocabList: VocabItem[]): number => {
+  return vocabList.length;
+}
+
 
 const vocabLists: VocabList[] = [
   {
     id: 'test-set',
     name: 'Test Set',
     description: 'A small test vocabulary set',
-    count: 5
+    count: calculateVocabListSize(testSetData as VocabItem[])
   },
   {
     id: 'kr-service-vocab',
     name: 'Korean Service Vocabulary',
     description: 'Common vocabulary for service situations',
-    count: 100
+    count: calculateVocabListSize(krServiceVocabData as VocabItem[])
   }
 ];
 
