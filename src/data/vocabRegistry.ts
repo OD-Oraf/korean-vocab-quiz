@@ -11,7 +11,10 @@ export const VOCAB_LIST_IDS = [
   'restaurant-food',
   'restaurant-grammar',
   'restaurant-requests',
-  'numbers/native-korean-numbers',
+  'native-numbers-1-10',
+  'native-numbers-10-100',
+  'korean-counters',
+  'numbers-with-counters',
   'transportation',
   'shopping',
   'directions-time',
@@ -23,11 +26,24 @@ export type VocabListId = typeof VOCAB_LIST_IDS[number];
 
 /**
  * Load vocab file and extract metadata + items
+ * Using eager glob import to support nested directories
  */
+const vocabFiles = import.meta.glob('./vocab/**/*.json', { eager: true });
+
 const loadVocabFile = async (fileId: string): Promise<VocabFileStructure | null> => {
   try {
-    const module = await import(`./vocab/${fileId}.json`);
-    const data = module.default;
+    // Construct the full path
+    const filePath = `./vocab/${fileId}.json`;
+    
+    // Get the module from the pre-loaded glob
+    const module = vocabFiles[filePath];
+    
+    if (!module) {
+      console.error(`Vocab file not found: ${fileId}`);
+      return null;
+    }
+    
+    const data = (module as any).default;
     
     // Check if file has new structure with metadata
     if (data.metadata && data.items) {
