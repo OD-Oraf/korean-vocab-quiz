@@ -9,6 +9,9 @@ An interactive Korean vocabulary quiz application built with React, TypeScript, 
 
 ## ✨ Features
 
+- **10 Topic-Focused Lists** - Choose from restaurant, travel, shopping, and emergency vocabulary
+- **347 Real-World Phrases** - Practical expressions you'll actually use in Korea
+- **Grammar Pattern Learning** - Dedicated list for essential Korean grammar structures
 - **Interactive Quiz Interface** - Clean, modern UI with smooth transitions
 - **Randomized Questions** - Questions are shuffled for each quiz session
 - **Real-time Feedback** - Immediate visual feedback for correct/incorrect answers
@@ -19,12 +22,25 @@ An interactive Korean vocabulary quiz application built with React, TypeScript, 
 
 ## 🎯 Quiz Content
 
-The quiz includes 15 essential Korean vocabulary items:
-- Question words (무엇 - what)
-- Daily items (물 - water, 음료 - beverage)
-- Time expressions (저녁 - evening, 이번 - this time)
-- Common verbs (읽다 - to read, 돕다 - to help, 열다 - to open)
-- Everyday objects (문 - door, 영상 - video)
+The quiz features **10 comprehensive vocabulary lists** with **347 items** covering practical Korean for everyday situations:
+
+### 🍽️ Restaurant & Dining (5 lists - 235 items)
+- **Restaurant Basics** - Greetings, reservations, ordering, and payment
+- **Restaurant Ordering** - Detailed ordering phrases and special requests
+- **Korean Food & Drinks** - Popular dishes, ingredients, and beverages
+- **Restaurant Grammar** - Essential grammar patterns (주세요, 해주세요, ~할게요)
+- **Restaurant Requests** - Utensils, amenities, feedback, and common questions
+
+### 🌍 Travel & Daily Life (4 lists - 97 items)
+- **Transportation** - Subway, bus, and taxi vocabulary
+- **Shopping** - Prices, transactions, and shopping phrases
+- **Directions & Time** - Navigation and time expressions
+- **Emergency & Help** - Essential emergency phrases
+
+### 📝 Practice
+- **Test Set** - Small beginner-friendly vocabulary set
+
+Each list includes **real-world phrases** and **practical examples** you'll actually use in Korea!
 
 ## 🚀 Quick Start
 
