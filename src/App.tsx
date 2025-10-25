@@ -1,30 +1,89 @@
 import {useState, useEffect} from 'react';
 import {Card, CardContent, CardHeader, CardTitle} from './components/ui/card';
 import {Button} from './components/ui/button';
-import testVocabSet from './data/vocab/test-set.json';
+import {VocabListSelector} from './components/VocabListSelector';
+import {BrowserRouter as Router, Routes, Route, useNavigate, useSearchParams} from 'react-router-dom';
+import {VocabItem, QuizItem} from './types/vocab';
 
-interface VocabItem {
-    korean: string;
-    english: string;
+const QuizApp = () => {
+    const navigate = useNavigate();
+    const [searchParams] = useSearchParams();
+    const listId = searchParams.get('list');
+    const [vocabList, setVocabList] = useState<VocabItem[]>([]);
+    const [isLoading, setIsLoading] = useState<boolean>(true);
+
+    useEffect(() => {
+        if (listId) {
+            setIsLoading(true);
+            import(`./data/vocab/${listId}.json`)
+                .then(module => {
+                    setVocabList(module.default);
+                    setIsLoading(false);
+                })
+                .catch(err => {
+                    console.error('Failed to load vocabulary list:', err);
+                    setIsLoading(false);
+                });
+        } else {
+            setIsLoading(false);
+        }
+    }, [listId]);
+
+    const handleListSelect = (newListId: string) => {
+        navigate(`/quiz?list=${newListId}`);
+    };
+
+    if (!listId) {
+        return <VocabListSelector onSelect={handleListSelect}/>;
+    }
+
+    if (isLoading) {
+        return (
+            <div
+                className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 p-4">
+                <div className="text-lg mb-4">Loading vocabulary list...</div>
+                <Button
+                    variant="outline"
+                    onClick={() => navigate('/')}
+                    className="mt-4"
+                >
+                    Back to Vocab Lists
+                </Button>
+            </div>
+        );
+    }
+
+    if (vocabList.length === 0) {
+        return (
+            <div
+                className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 p-4">
+                <div className="text-lg mb-4">No vocabulary list found</div>
+                <Button
+                    variant="outline"
+                    onClick={() => navigate('/')}
+                    className="mt-4"
+                >
+                    Back to Vocab Lists
+                </Button>
+            </div>
+        );
+    }
+
+    return <KoreanVocabQuiz vocabList={vocabList} onBackToList={() => navigate('/')}/>;
+};
+
+interface KoreanVocabQuizProps {
+    vocabList: VocabItem[];
+    onBackToList: () => void;
 }
 
-interface QuizItem extends VocabItem {
-    options: string[];
-}
-
-const KoreanVocabQuiz = () => {
-    const vocabList: VocabItem[] = testVocabSet;
-
+const KoreanVocabQuiz = ({vocabList, onBackToList}: KoreanVocabQuizProps) => {
     const [currentQuestion, setCurrentQuestion] = useState<number>(0);
     const [score, setScore] = useState<number>(0);
     const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
     const [showResult, setShowResult] = useState<boolean>(false);
     const [quizComplete, setQuizComplete] = useState<boolean>(false);
     const [shuffledVocab, setShuffledVocab] = useState<QuizItem[]>([]);
-
-    useEffect(() => {
-        shuffleQuiz();
-    }, []);
 
     const shuffleArray = <T, >(array: T[]): T[] => {
         const shuffled = [...array];
@@ -36,31 +95,21 @@ const KoreanVocabQuiz = () => {
     };
 
     const generateRandomOptions = (correctAnswer: string, allAnswers: string[]): string[] => {
-        // Get all possible wrong answers (excluding the correct one)
         const wrongAnswers = allAnswers.filter(answer => answer !== correctAnswer);
-
-        // Shuffle and take 3 random wrong answers
-        const shuffledWrong: string[] = shuffleArray(wrongAnswers);
+        const shuffledWrong = shuffleArray(wrongAnswers);
         const selectedWrong = shuffledWrong.slice(0, 3);
-
-        // Combine correct answer with wrong answers and shuffle
         const options = [correctAnswer, ...selectedWrong];
         return shuffleArray(options);
     };
 
     const shuffleQuiz = (): void => {
-        // Get all English answers for the option pool
-        const allEnglishAnswers: string[] = vocabList.map(item => item.english);
-
-        // Create quiz items with randomized options
+        const allEnglishAnswers = vocabList.map(item => item.english);
         const quizItems: QuizItem[] = vocabList.map(item => ({
             ...item,
             options: generateRandomOptions(item.english, allEnglishAnswers)
         }));
 
-        // Shuffle the quiz order
-        const shuffled = shuffleArray(quizItems);
-        setShuffledVocab(shuffled);
+        setShuffledVocab(shuffleArray(quizItems));
         setCurrentQuestion(0);
         setScore(0);
         setSelectedAnswer(null);
@@ -68,11 +117,17 @@ const KoreanVocabQuiz = () => {
         setQuizComplete(false);
     };
 
+    useEffect(() => {
+        if (vocabList.length > 0) {
+            shuffleQuiz();
+        }
+    }, [vocabList]);
+
     const handleAnswer = (answer: string): void => {
         setSelectedAnswer(answer);
         setShowResult(true);
 
-        if (answer === shuffledVocab[currentQuestion].english) {
+        if (answer === shuffledVocab[currentQuestion]?.english) {
             setScore(score + 1);
         }
     };
@@ -87,18 +142,31 @@ const KoreanVocabQuiz = () => {
         }
     };
 
+    const currentVocab = shuffledVocab[currentQuestion];
+
     if (shuffledVocab.length === 0) {
-        return <div className="flex items-center justify-center min-h-screen">Loading...</div>;
+        return (
+            <div className="flex items-center justify-center min-h-screen">
+                <div>Loading quiz...</div>
+            </div>
+        );
     }
 
     if (quizComplete) {
         const percentage = Math.round((score / shuffledVocab.length) * 100);
         return (
             <div
-                className="flex items-center justify-center min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 p-4">
+                className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 p-4">
+                <Button
+                    variant="ghost"
+                    onClick={onBackToList}
+                    className="self-start mb-4"
+                >
+                    ← Back to Vocab Lists
+                </Button>
                 <Card className="w-full max-w-2xl">
-                    <CardHeader>
-                        <CardTitle className="text-3xl text-center">Quiz Complete! 🎉</CardTitle>
+                    <CardHeader className="text-center">
+                        <CardTitle className="text-3xl">Quiz Complete! 🎉</CardTitle>
                     </CardHeader>
                     <CardContent className="text-center space-y-6">
                         <div className="text-6xl font-bold text-indigo-600">
@@ -113,30 +181,53 @@ const KoreanVocabQuiz = () => {
                                     percentage >= 50 ? "Good effort! Keep practicing!" :
                                         "Keep studying! You'll improve! 화이팅!"}
                         </div>
-                        <Button
-                            onClick={shuffleQuiz}
-                            className="w-full max-w-xs bg-indigo-600 hover:bg-indigo-700 text-lg py-6"
-                        >
-                            Try Again
-                        </Button>
+                        <div className="flex justify-center gap-4">
+                            <Button
+                                onClick={shuffleQuiz}
+                                className="bg-indigo-600 hover:bg-indigo-700 text-lg py-3 px-6"
+                            >
+                                Try Again
+                            </Button>
+                            <Button
+                                onClick={onBackToList}
+                                variant="outline"
+                                className="text-lg py-3 px-6"
+                            >
+                                Choose Another List
+                            </Button>
+                        </div>
                     </CardContent>
                 </Card>
             </div>
         );
     }
 
-    const currentVocab = shuffledVocab[currentQuestion];
+    if (!currentVocab) {
+        return (
+            <div className="flex items-center justify-center min-h-screen">
+                <div>Loading quiz...</div>
+            </div>
+        );
+    }
 
     return (
-        <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 p-4">
+        <div
+            className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 p-4">
+            <Button
+                variant="ghost"
+                onClick={onBackToList}
+                className="self-start mb-4"
+            >
+                ← Back to Vocab Lists
+            </Button>
             <Card className="w-full max-w-2xl">
                 <CardHeader>
                     <div className="flex justify-between items-center mb-2">
                         <span className="text-sm text-gray-600">
-                          Question {currentQuestion + 1} of {shuffledVocab.length}
+                            Question {currentQuestion + 1} of {shuffledVocab.length}
                         </span>
                         <span className="text-sm font-semibold text-indigo-600">
-                          Score: {score}
+                            Score: {score}
                         </span>
                     </div>
                     <div className="w-full bg-gray-200 rounded-full h-2">
@@ -206,4 +297,14 @@ const KoreanVocabQuiz = () => {
     );
 };
 
-export default KoreanVocabQuiz;
+const App = () => (
+    <Router>
+        <Routes>
+            <Route path="/" element={<VocabListSelector
+                onSelect={(listId) => window.location.href = `/quiz?list=${listId}`}/>}/>
+            <Route path="/quiz" element={<QuizApp/>}/>
+        </Routes>
+    </Router>
+);
+
+export default App;
