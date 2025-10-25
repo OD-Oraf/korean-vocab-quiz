@@ -3,7 +3,7 @@
  */
 
 export interface VocabItem {
-  id: string;
+  id?: string; // Optional for backward compatibility with old format
   korean: string;
   english: string;
   romanization?: string;

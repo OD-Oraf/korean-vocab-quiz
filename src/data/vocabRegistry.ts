@@ -83,7 +83,7 @@ export const getAllVocabLists = async (): Promise<VocabList[]> => {
         count: fileData.items.length,
         // Auto-calculate totalItems if not present in metadata
         totalItems: fileData.metadata.totalItems || fileData.items.length
-      };
+      } as VocabList;
     })
   );
   
