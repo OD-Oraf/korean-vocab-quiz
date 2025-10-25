@@ -1,0 +1,210 @@
+{
+  "metadata": {
+    "name": "📊 Korean Counters",
+    "description": "Essential Korean counter words for counting different types of objects",
+    "category": "numbers",
+    "difficulty": "intermediate",
+    "tags": ["counters", "numbers", "grammar", "intermediate"],
+    "author": "Korean Vocab Quiz",
+    "version": "1.0",
+    "lastUpdated": "2025-10-25",
+    "estimatedMinutes": 12,
+    "prerequisites": ["native-numbers-1-10"],
+    "relatedLists": ["native-numbers-1-10", "numbers-with-counters"],
+    "learningPath": "korean-basics"
+  },
+  "items": [
+    {
+      "id": "counter_001",
+      "korean": "개",
+      "english": "counter for general items",
+      "romanization": "gae",
+      "partOfSpeech": "noun",
+      "difficultyScore": 2,
+      "frequencyRank": 1,
+      "notes": "Most common counter; used for general objects",
+      "examples": [
+        {
+          "korean": "사과 세 개",
+          "english": "three apples"
+        }
+      ]
+    },
+    {
+      "id": "counter_002",
+      "korean": "명",
+      "english": "counter for people",
+      "romanization": "myeong",
+      "partOfSpeech": "noun",
+      "difficultyScore": 2,
+      "frequencyRank": 2,
+      "notes": "Used for counting people politely",
+      "examples": [
+        {
+          "korean": "친구 세 명",
+          "english": "three friends"
+        }
+      ]
+    },
+    {
+      "id": "counter_003",
+      "korean": "마리",
+      "english": "counter for animals",
+      "romanization": "mari",
+      "partOfSpeech": "noun",
+      "difficultyScore": 3,
+      "frequencyRank": 8,
+      "notes": "Used for counting animals",
+      "examples": [
+        {
+          "korean": "강아지 한 마리",
+          "english": "one puppy"
+        }
+      ]
+    },
+    {
+      "id": "counter_004",
+      "korean": "병",
+      "english": "counter for bottles",
+      "romanization": "byeong",
+      "partOfSpeech": "noun",
+      "difficultyScore": 3,
+      "frequencyRank": 5,
+      "notes": "Used for bottled items",
+      "examples": [
+        {
+          "korean": "맥주 두 병",
+          "english": "two bottles of beer"
+        }
+      ]
+    },
+    {
+      "id": "counter_005",
+      "korean": "잔",
+      "english": "counter for cups/glasses",
+      "romanization": "jan",
+      "partOfSpeech": "noun",
+      "difficultyScore": 3,
+      "frequencyRank": 4,
+      "notes": "Used for drinks in cups or glasses",
+      "examples": [
+        {
+          "korean": "물 한 잔",
+          "english": "one glass of water"
+        }
+      ]
+    },
+    {
+      "id": "counter_006",
+      "korean": "권",
+      "english": "counter for books",
+      "romanization": "gwon",
+      "partOfSpeech": "noun",
+      "difficultyScore": 4,
+      "frequencyRank": 10,
+      "notes": "Used for bound items like books and magazines",
+      "examples": [
+        {
+          "korean": "책 다섯 권",
+          "english": "five books"
+        }
+      ]
+    },
+    {
+      "id": "counter_007",
+      "korean": "장",
+      "english": "counter for flat items",
+      "romanization": "jang",
+      "partOfSpeech": "noun",
+      "difficultyScore": 4,
+      "frequencyRank": 7,
+      "notes": "Used for paper, tickets, photos, etc.",
+      "examples": [
+        {
+          "korean": "종이 열 장",
+          "english": "ten sheets of paper"
+        }
+      ]
+    },
+    {
+      "id": "counter_008",
+      "korean": "대",
+      "english": "counter for machines/vehicles",
+      "romanization": "dae",
+      "partOfSpeech": "noun",
+      "difficultyScore": 4,
+      "frequencyRank": 9,
+      "notes": "Used for cars, computers, phones, etc.",
+      "examples": [
+        {
+          "korean": "자동차 한 대",
+          "english": "one car"
+        }
+      ]
+    },
+    {
+      "id": "counter_009",
+      "korean": "살",
+      "english": "counter for age",
+      "romanization": "sal",
+      "partOfSpeech": "noun",
+      "difficultyScore": 2,
+      "frequencyRank": 3,
+      "notes": "Used for counting age in years",
+      "examples": [
+        {
+          "korean": "스무 살",
+          "english": "twenty years old"
+        }
+      ]
+    },
+    {
+      "id": "counter_010",
+      "korean": "시간",
+      "english": "counter for hours",
+      "romanization": "sigan",
+      "partOfSpeech": "noun",
+      "difficultyScore": 3,
+      "frequencyRank": 6,
+      "notes": "Used for counting hours of time",
+      "examples": [
+        {
+          "korean": "두 시간",
+          "english": "two hours"
+        }
+      ]
+    },
+    {
+      "id": "counter_011",
+      "korean": "번",
+      "english": "counter for times/occasions",
+      "romanization": "beon",
+      "partOfSpeech": "noun",
+      "difficultyScore": 3,
+      "frequencyRank": 11,
+      "notes": "Used for counting number of times or occurrences",
+      "examples": [
+        {
+          "korean": "한 번",
+          "english": "one time"
+        }
+      ]
+    },
+    {
+      "id": "counter_012",
+      "korean": "번째",
+      "english": "ordinal counter",
+      "romanization": "beonjjae",
+      "partOfSpeech": "noun",
+      "difficultyScore": 4,
+      "frequencyRank": 12,
+      "notes": "Used for ordinal numbers (first, second, third)",
+      "examples": [
+        {
+          "korean": "첫 번째",
+          "english": "first"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,168 @@
+{
+  "metadata": {
+    "name": "🔢 Native Korean Numbers 10-100",
+    "description": "Native Korean numbers from ten to ninety-nine",
+    "category": "numbers",
+    "difficulty": "intermediate",
+    "tags": ["numbers", "counting", "intermediate"],
+    "author": "Korean Vocab Quiz",
+    "version": "1.0",
+    "lastUpdated": "2025-10-25",
+    "estimatedMinutes": 10,
+    "prerequisites": ["native-numbers-1-10"],
+    "relatedLists": ["native-numbers-1-10", "korean-counters"],
+    "learningPath": "korean-basics"
+  },
+  "items": [
+    {
+      "id": "native_num_10",
+      "korean": "열",
+      "english": "ten",
+      "romanization": "yeol",
+      "partOfSpeech": "noun",
+      "difficultyScore": 1,
+      "frequencyRank": 10,
+      "notes": "Base number for 10-19"
+    },
+    {
+      "id": "native_num_11",
+      "korean": "열하나",
+      "english": "eleven",
+      "romanization": "yeolhana",
+      "partOfSpeech": "noun",
+      "difficultyScore": 3,
+      "frequencyRank": 11,
+      "notes": "Literally 'ten-one'"
+    },
+    {
+      "id": "native_num_12",
+      "korean": "열둘",
+      "english": "twelve",
+      "romanization": "yeoldul",
+      "partOfSpeech": "noun",
+      "difficultyScore": 3,
+      "frequencyRank": 12,
+      "notes": "Literally 'ten-two'"
+    },
+    {
+      "id": "native_num_13",
+      "korean": "열셋",
+      "english": "thirteen",
+      "romanization": "yeolset",
+      "partOfSpeech": "noun",
+      "difficultyScore": 3,
+      "frequencyRank": 13,
+      "notes": "Literally 'ten-three'"
+    },
+    {
+      "id": "native_num_14",
+      "korean": "열넷",
+      "english": "fourteen",
+      "romanization": "yeolnet",
+      "partOfSpeech": "noun",
+      "difficultyScore": 3,
+      "frequencyRank": 14,
+      "notes": "Literally 'ten-four'"
+    },
+    {
+      "id": "native_num_15",
+      "korean": "열다섯",
+      "english": "fifteen",
+      "romanization": "yeoldaseot",
+      "partOfSpeech": "noun",
+      "difficultyScore": 3,
+      "frequencyRank": 15,
+      "notes": "Literally 'ten-five'"
+    },
+    {
+      "id": "native_num_20",
+      "korean": "스무",
+      "english": "twenty",
+      "romanization": "seumu",
+      "partOfSpeech": "noun",
+      "difficultyScore": 3,
+      "frequencyRank": 20,
+      "notes": "Irregular form; becomes 스물 when followed by another number"
+    },
+    {
+      "id": "native_num_21",
+      "korean": "스물하나",
+      "english": "twenty-one",
+      "romanization": "seumulhana",
+      "partOfSpeech": "noun",
+      "difficultyScore": 4,
+      "frequencyRank": 21,
+      "notes": "스무 changes to 스물 before other numbers"
+    },
+    {
+      "id": "native_num_30",
+      "korean": "서른",
+      "english": "thirty",
+      "romanization": "seoreun",
+      "partOfSpeech": "noun",
+      "difficultyScore": 3,
+      "frequencyRank": 30,
+      "notes": "Base number for 30-39"
+    },
+    {
+      "id": "native_num_40",
+      "korean": "마흔",
+      "english": "forty",
+      "romanization": "maheun",
+      "partOfSpeech": "noun",
+      "difficultyScore": 4,
+      "frequencyRank": 40,
+      "notes": "Base number for 40-49"
+    },
+    {
+      "id": "native_num_50",
+      "korean": "쉰",
+      "english": "fifty",
+      "romanization": "swin",
+      "partOfSpeech": "noun",
+      "difficultyScore": 4,
+      "frequencyRank": 50,
+      "notes": "Base number for 50-59"
+    },
+    {
+      "id": "native_num_60",
+      "korean": "예순",
+      "english": "sixty",
+      "romanization": "yesun",
+      "partOfSpeech": "noun",
+      "difficultyScore": 5,
+      "frequencyRank": 60,
+      "notes": "Base number for 60-69"
+    },
+    {
+      "id": "native_num_70",
+      "korean": "일흔",
+      "english": "seventy",
+      "romanization": "ilheun",
+      "partOfSpeech": "noun",
+      "difficultyScore": 5,
+      "frequencyRank": 70,
+      "notes": "Base number for 70-79"
+    },
+    {
+      "id": "native_num_80",
+      "korean": "여든",
+      "english": "eighty",
+      "romanization": "yeodeun",
+      "partOfSpeech": "noun",
+      "difficultyScore": 5,
+      "frequencyRank": 80,
+      "notes": "Base number for 80-89"
+    },
+    {
+      "id": "native_num_90",
+      "korean": "아흔",
+      "english": "ninety",
+      "romanization": "aheun",
+      "partOfSpeech": "noun",
+      "difficultyScore": 5,
+      "frequencyRank": 90,
+      "notes": "Base number for 90-99; native Korean numbers only go up to 99"
+    }
+  ]
+}

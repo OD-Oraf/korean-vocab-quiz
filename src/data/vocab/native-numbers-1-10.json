@@ -1,0 +1,118 @@
+{
+  "metadata": {
+    "name": "🔢 Native Korean Numbers 1-10",
+    "description": "Basic native Korean numbers from one to ten",
+    "category": "numbers",
+    "difficulty": "beginner",
+    "tags": ["numbers", "basics", "beginner-friendly", "counting"],
+    "author": "Korean Vocab Quiz",
+    "version": "1.0",
+    "lastUpdated": "2025-10-25",
+    "estimatedMinutes": 5,
+    "prerequisites": [],
+    "relatedLists": ["native-numbers-10-100", "korean-counters"],
+    "learningPath": "korean-basics"
+  },
+  "items": [
+    {
+      "id": "native_num_001",
+      "korean": "하나",
+      "english": "one",
+      "romanization": "hana",
+      "partOfSpeech": "noun",
+      "difficultyScore": 1,
+      "frequencyRank": 1,
+      "notes": "Native Korean number for 1"
+    },
+    {
+      "id": "native_num_002",
+      "korean": "둘",
+      "english": "two",
+      "romanization": "dul",
+      "partOfSpeech": "noun",
+      "difficultyScore": 1,
+      "frequencyRank": 2,
+      "notes": "Native Korean number for 2"
+    },
+    {
+      "id": "native_num_003",
+      "korean": "셋",
+      "english": "three",
+      "romanization": "set",
+      "partOfSpeech": "noun",
+      "difficultyScore": 1,
+      "frequencyRank": 3,
+      "notes": "Native Korean number for 3"
+    },
+    {
+      "id": "native_num_004",
+      "korean": "넷",
+      "english": "four",
+      "romanization": "net",
+      "partOfSpeech": "noun",
+      "difficultyScore": 1,
+      "frequencyRank": 4,
+      "notes": "Native Korean number for 4"
+    },
+    {
+      "id": "native_num_005",
+      "korean": "다섯",
+      "english": "five",
+      "romanization": "daseot",
+      "partOfSpeech": "noun",
+      "difficultyScore": 2,
+      "frequencyRank": 5,
+      "notes": "Native Korean number for 5"
+    },
+    {
+      "id": "native_num_006",
+      "korean": "여섯",
+      "english": "six",
+      "romanization": "yeoseot",
+      "partOfSpeech": "noun",
+      "difficultyScore": 2,
+      "frequencyRank": 6,
+      "notes": "Native Korean number for 6"
+    },
+    {
+      "id": "native_num_007",
+      "korean": "일곱",
+      "english": "seven",
+      "romanization": "ilgop",
+      "partOfSpeech": "noun",
+      "difficultyScore": 2,
+      "frequencyRank": 7,
+      "notes": "Native Korean number for 7"
+    },
+    {
+      "id": "native_num_008",
+      "korean": "여덟",
+      "english": "eight",
+      "romanization": "yeodeol",
+      "partOfSpeech": "noun",
+      "difficultyScore": 2,
+      "frequencyRank": 8,
+      "notes": "Native Korean number for 8"
+    },
+    {
+      "id": "native_num_009",
+      "korean": "아홉",
+      "english": "nine",
+      "romanization": "ahop",
+      "partOfSpeech": "noun",
+      "difficultyScore": 2,
+      "frequencyRank": 9,
+      "notes": "Native Korean number for 9"
+    },
+    {
+      "id": "native_num_010",
+      "korean": "열",
+      "english": "ten",
+      "romanization": "yeol",
+      "partOfSpeech": "noun",
+      "difficultyScore": 1,
+      "frequencyRank": 10,
+      "notes": "Native Korean number for 10"
+    }
+  ]
+}
