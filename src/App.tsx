@@ -27,7 +27,9 @@ const KoreanVocabQuiz = () => {
     }, []);
 
     const shuffleArray = <T, >(array: T[]): T[] => {
+        // Make copy of array
         const shuffled = [...array];
+        // shuffle by swapping random elements
         for (let i = shuffled.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
             [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
