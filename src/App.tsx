@@ -5,6 +5,11 @@ import {VocabListSelector} from './components/VocabListSelector';
 import {BrowserRouter as Router, Routes, Route, useNavigate, useSearchParams} from 'react-router-dom';
 import {VocabItem, QuizItem} from './types/vocab';
 
+interface KoreanVocabQuizProps {
+    vocabList: VocabItem[];
+    onBackToList: () => void;
+}
+
 const QuizApp = () => {
     const navigate = useNavigate();
     const [searchParams] = useSearchParams();
@@ -82,10 +87,6 @@ const QuizApp = () => {
     return <KoreanVocabQuiz vocabList={vocabList} onBackToList={() => navigate('/')}/>;
 };
 
-interface KoreanVocabQuizProps {
-    vocabList: VocabItem[];
-    onBackToList: () => void;
-}
 
 const KoreanVocabQuiz = ({vocabList, onBackToList}: KoreanVocabQuizProps) => {
     const [currentQuestion, setCurrentQuestion] = useState<number>(0);
